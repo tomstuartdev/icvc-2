@@ -132,7 +132,7 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/roadmap">Our Roadmap</NavigationItem>
-        <NavigationItem href="https://drive.google.com/file/d/1BMy5v_6wu4syWEBCDvkxHzDGfOKp5sqY/view?usp=sharing">Whitepaper</NavigationItem>
+        <NavigationItem href="https://drive.google.com/file/d/1zxxrc9vq4agNTjO9LGEbcTUXzsPWwn62/view?usp=sharing">Whitepaper</NavigationItem>
       </NavigationRow>
     </nav>
   )

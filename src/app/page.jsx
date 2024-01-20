@@ -22,6 +22,7 @@ import logoDfinity from '@/images/projects/dfinity/dfinity.png'
 import logoFunded from '@/images/projects/funded/funded.png'
 import logoTRAX from '@/images/projects/trax/trax.png'
 import logoDfinityBlack from '@/images/projects/dfinity/dfinity-black.png'
+import logoVault from '@/images/projects/vault/vault.png'
 import imageLaptop from '@/images/laptop.jpg'
 import imageEcosystem from '@/images/ecosystem.png'
 import { loadCaseStudies } from '@/lib/mdx'
@@ -31,6 +32,7 @@ const clients = [
   ['Plug', logoPlug],
   ['TRAX', logoTRAX],
   ['Funded', logoFunded],
+  ['VaultBet', logoVault]
 ]
 
 function Clients() {
@@ -46,7 +48,7 @@ function Clients() {
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-5"
           >
             {clients.map(([client, logo]) => (
               <li key={client}>

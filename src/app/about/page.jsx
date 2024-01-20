@@ -24,6 +24,8 @@ import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 import imageTomStuart from '@/images/team/tom-stuart.jpg'
 import imageLukeDugdale from '@/images/team/luke-dugdale.jpeg'
 import imageClementMayer from '@/images/team/clement-mayer.jpeg'
+import imageMazenZibara from '@/images/team/mazen-zibara.jpg'
+import imageIsaacDugdale from '@/images/team/isaac-dugdale.jpg'
 
 import { loadArticles } from '@/lib/mdx'
 
@@ -78,12 +80,12 @@ const team = [
       {
         name: 'Isaac Dugdale',
         role: 'Partner',
-        image: { src: imageChelseaHagon },
+        image: { src: imageIsaacDugdale },
       },
       {
-        name: 'Orlando Hutchings',
+        name: 'Mazen Zibara',
         role: 'Partner',
-        image: { src: imageEmmaDorsey },
+        image: { src: imageMazenZibara },
       },
     ],
   },

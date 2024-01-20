@@ -17,7 +17,7 @@ export function Logomark({ invert = false, filled = false, ...props }) {
       <use
         href={`#${id}-path`}
         className={invert ? 'stroke-white' : 'stroke-neutral-950'}
-        fill="none"
+        fill="black"
         strokeWidth="1.5"
       />
       <defs>
@@ -37,7 +37,7 @@ export function Logo({
   className,
   invert = false,
   filled = false,
-  fillOnHover = false,
+  fillOnHover = true,
   ...props
 }) {
   return (

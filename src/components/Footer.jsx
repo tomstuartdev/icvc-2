@@ -7,11 +7,11 @@ import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
-    title: 'Work',
+    title: 'Funds',
     links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
+      { title: 'Early Ventures', href: '/work/early-ventures' },
+      { title: 'SNS', href: '/work/sns' },
+      { title: 'Liquidity Providing', href: '/work/liquidity-providing' },
       {
         title: (
           <>
@@ -26,8 +26,8 @@ const navigation = [
     title: 'Company',
     links: [
       { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
+      { title: 'Roadmap', href: '/roadmap' },
+     
       { title: 'Contact us', href: '/contact' },
     ],
   },
@@ -125,7 +125,7 @@ export function Footer() {
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © M51 Creative {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

@@ -41,17 +41,14 @@ function Culture() {
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Accessible" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Decentralised" invert>
+            We believe in the power of decentralised systems to solve a number of critical problems.
           </GridListItem>
           <GridListItem title="Transparent" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+            We believe in bringing transparency to the investment process & decision making.
           </GridListItem>
           <GridListItem title="Community-driven" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+            We believe in involving the IC community in ecosystem investment & development.
           </GridListItem>
         </GridList>
       </Container>
@@ -61,7 +58,7 @@ function Culture() {
 
 const team = [
   {
-    title: 'Leadership',
+    title: 'Contributors',
     people: [
       {
         name: 'Luke Dugdale',
@@ -78,29 +75,19 @@ const team = [
         role: 'Partner',
         image: { src: imageClementMayer },
       },
-    ],
-  },
-  {
-    title: 'Team',
-    people: [
       {
         name: 'Isaac Dugdale',
-        role: 'Investment Analyst',
+        role: 'Partner',
         image: { src: imageChelseaHagon },
       },
       {
         name: 'Orlando Hutchings',
-        role: 'Investment Analyst',
+        role: 'Partner',
         image: { src: imageEmmaDorsey },
       },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      
     ],
   },
+  
 ]
 
 function Team() {
@@ -188,12 +175,7 @@ export default async function About() {
 
       <Team />
 
-      <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
-        pages={blogArticles}
-      />
+      
 
       <ContactSection />
     </>

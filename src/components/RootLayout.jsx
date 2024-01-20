@@ -131,8 +131,8 @@ function Navigation() {
         <NavigationItem href="/about">About Us</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/roadmap">Our Roadmap</NavigationItem>
+        <NavigationItem href="https://drive.google.com/file/d/1BMy5v_6wu4syWEBCDvkxHzDGfOKp5sqY/view?usp=sharing">Whitepaper</NavigationItem>
       </NavigationRow>
     </nav>
   )

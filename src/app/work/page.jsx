@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { ImageWrapper } from'@/components/ImageWrapper'
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
@@ -146,7 +146,7 @@ export default async function Work() {
 
       <CaseStudies caseStudies={caseStudies} />
 
-      <Testimonial
+      {/* <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
       >
@@ -154,7 +154,7 @@ export default async function Work() {
         delivered something remarkably similar in record time.
       </Testimonial>
 
-      <Clients />
+      <Clients /> */}
 
       <ContactSection />
     </>

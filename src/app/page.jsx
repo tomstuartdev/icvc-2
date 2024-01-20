@@ -6,7 +6,7 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
+
 import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
@@ -31,10 +31,6 @@ const clients = [
   ['Plug', logoPlug],
   ['TRAX', logoTRAX],
   ['Funded', logoFunded],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
 ]
 
 function Clients() {
@@ -134,27 +130,16 @@ function Services() {
       </SectionIntro>
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
-          <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-              <StylizedImage
-                src={imageEcosystem}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
-            </FadeIn>
-          </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
+          
+          <List className="mt-16 lg:mt-0 lg:w-full lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Infrastructure">
               We believe investing in infrastructure to support the next generation of builders on the IC.
             </ListItem>
             <ListItem title="DeFi">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            Investing in DeFi projects, leveraging blockchain&apos;s decentralized financial services, offers potential rewards, yet entails risks. Careful research and vigilance are vital in this evolving landscape.
             </ListItem>
             <ListItem title="Consumer apps">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+              We believe in the potential of consumer apps to 10x the growth and adoption of the IC network.
             </ListItem>
             {/* <ListItem title="Custom content management">
               At Studio we understand the importance of having a robust and

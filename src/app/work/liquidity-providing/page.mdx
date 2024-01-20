@@ -1,6 +1,8 @@
 import logo from '@/images/funds/lp.png'
-import imageHero from './hero.jpg'
+import imageHero from './hero.png'
 import imageDebraFiscal from './debra-fiscal.jpg'
+import StylizedImage from '@/components/StylizedImage'
+
 
 export const caseStudy = {
   client: 'Liquidity Providing',
@@ -8,17 +10,17 @@ export const caseStudy = {
   description:
     'Dedicated to providing liquidity to various DEXs on ICP through both liquidity pools and active market making.',
   summary: [
-    'FamilyFund is a crowdfunding platform for friends and family. Allowing users to take personal loans from their network without a traditional financial institution.',
-    'We developed a custom CMS to power their blog with and optimised their site to rank higher for the keywords “Gary Vee” and “Tony Robbins”.',
+    'Liquidity Provisioning Fund is dedicated to providing liquidity to various DEX’s on ICP through both liquidity pools and active market making, with the aim of increasing the availability of tokens within the ecosystem and creating enduring markets.',
+    
   ],
   logo,
   image: { src: imageHero },
-  date: '2023-01',
-  service: 'Web development, CMS',
+  date: '2024-01',
+  service: 'Market making, algorithmic trading',
   testimonial: {
-    author: { name: 'Debra Fiscal', role: 'CEO of FamilyFund' },
+    author: { name: 'Isaac Dugdale', role: 'Investment Partner' },
     content:
-      'Working with Studio, we felt more like a partner than a customer. They really resonated with our mission to change the way people convince their parents to cash out their pensions.',
+      'Our liquidity providing and algorithmic market making will enable a better trading experience across the IC, providing more robust markets for investors.',
   },
 }
 
@@ -29,35 +31,94 @@ export const metadata = {
 
 ## Overview
 
-Having written one of the most shared posts on medium.com (“_How to cash out your Dad’s 401K without him knowing_”) FamilyFund approached us looking to build out their own blog.
 
-The blog would help drive new traffic to their site and serve as a resource-hub for users already trying to exploit their network for money. Because it was so important that they own their own content, we decided that an on-prem solution would be best.
+Our initial focus will be to fix the current liquidity shortfall of chain-key tokens (ckBTC and ckETH) and provide a tighter two-way market for ICP/ckBTC & ICP/ckETH trades. By doing so, the fund intends to drive increased trading, adoption and usage of chain key tokens within the Internet Computer whilst generating fair profits for ICVC investors. 
 
-We installed 24 Mac Minis bought from craigslist in the storage cupboard of their office. One machine would be used for the web server and another one for the build server. The other 22 were for redundancy, and to DDOS squarespace.com every few months to keep them on their toes.
+As an example to demonstrate the market need for Fund 2, we have included a screenshot of the ICDex order book as of 11:45pm EST on Jan 7 2024, for ICP/ckBTC pair.
 
-To optimise their search traffic we used an innovative technique. Every post has a shadow post only visible to web crawlers that is some variation of _“Gary Vee is looking to invest in new founders”_. Like bees to honey.
 
-## What we did
+<StylizedImage/>
+
+To the right, we can see that the bid/offer is 2910.000/3850.000, meaning that a trader would be able to buy the pair at 3850 (i.e they would get 1 ckBTC for 3850 ICP), and sell it at 2910. 
+
+With ckBTC currently trading at $43,800 and ICP trading at $11.4, the fair value of the pair is ~$3842 (43800/11.4). At the time of our screenshot, a trader can Buy this pair for a decent price: (3850-3842)/3842=0.002, or 20 bps above its fair value. 
+
+However, a trader can only sell the pair for 2910, which is (3842-2910)/3842=0.243, or 24.3% lower than fair value. This large discount to fair value discourages trading and is blocked by most swap plug-ins that set a much lower max slippage. In essence, no one would or can sell this pair due to a lack of liquidity.
+
+Fund 2 aims to fix these liquidity issues by providing much tighter 2-way markets, thereby  creating the opportunity for volumes to pick up on the different DEXs. 
+
+Fund 2 would generate profits for investors through two main means: 
+
+- Earning the spread (difference between the bid and offer prices). In our prior example, the market maker would earn 3850-2910=940 ICP for each ckBTC flipped. This is of course an extreme and unrealistic example, as explained above, though Fund 2 as a first mover in liquidity provisioning on various DEX’s will aim to earn 2-4% for each pair flipped.
+- Earning maker fees directly from DEXs. Market makers provide a service to DEXs by providing liquidity, enabling volume and trading activity to increase, which in turn creates more stable markets and attracts more participants.
+
+The market making bot will include risk mitigation measures to avoid disproportionate prices or losses in any large market swings. As such, for the provisioning of Chain-Key tokens liquidity the trading bot may call to check prices offered on more developed markets of ICP, BTC and ETH to ensure prices offered by Fund 2 on ICP/ckBTC and ICP/ckETH pairs emain within a set range. 
+
+Trading bots developed by Fund 2 will also include robust inventory management processes to avoid building asymmetric positions that are too large, staying as close to market neutral as possible to avoid losses when large moves occur in a given token relative to its trading pair. 
+
+## Capital Allocation 
+
+In order to provide the depth of liquidity required for the ecosystem as a whole to thrive and attract increased trading volumes, we have allocated approximately “”% to Fund 2 - Liquidity Provisioning. This capital will allow us to substantially solidify markets on ICP and pave the way for a new era of increased stability and liquidity as first movers on various DEXs. 
+
+## Team
+
+Fund 2 has a distinct management team, adapted to the expertise required to develop various investment algorithms and the challenges surrounding market making.
+
+In order to maintain profitable returns to the Fund and a nimble development process, Fund 2 will be managed by a single Expert Market Making Engineer tasked with building trading bots and investment channels, owned by smart contracts and governed by ICVC DAO.
+
+The Market Making Engineer is elected by ICVC token holders at the launch for Fund 2, ensuring alignment with the ICVC community's values and objectives. If this manager desires to leave, notice must be given at which point the ICVC Foundation proposes a replacement who must then be approved through a community vote, thereby maintaining a handover period, transparency and community involvement in Fund 2’s management.
+
+## Investment process
+
+The investment process for Fund 2 is designed to be thorough with a focus on benefit to the ecosystem and security, ensuring that funds remain guarded and under the control of ICVC DAO throughout the process. 
+
+### Step 1: Initial Voting to Explore a Liquidity Provision 
+Any ICVC token holder or the ICVC Foundation team can initiate a vote to consider a new liquidity provision proposal.
+DEX’s can also apply for liquidity provisioning by filling out a form, which automatically triggers a community vote. This is the preliminary step in the investment process, and a proposed DEX or new trading pair only proceeds to the next stage if this initial vote is successful.
+
+### Step 2: In-Depth Evaluation by the Market Making Engineer
+Once a liquidity provision passes the initial vote, the Market Making Engineer conducts a comprehensive review.
+This review will include an evaluation of the viability of the liquidity provision in terms of technical feasibility, profitability, risk management and beneficial impact to the ecosystem. 
+The engineer engages in multiple discussions with the selected DEX during this phase to thoroughly assess the best approach to deploy liquidity and potential of proposed liquidity provision. 
+
+### Step 3: Submission of Pre-Investment Report
+The Engineer compiles a pre-investment report within a month, if feasible.
+The report provides an overall grade ranging from 1 (highly discourage investment) to 5 (strongly recommend investment).
+This report will also include the proposed investment strategy, initial liquidity needed, forecast returns to fund and upfront development costs required in order to build and integrate trading bots and investment channels hosted on smart contracts and governed by ICVC DAO. 
+
+### Step 4: Community Vote on Investment
+Upon completion of the pre-investment report, a vote is opened to all ICVC holders to decide on proceeding with the liquidity provision.
+An escrow canister is deployed prior to this vote. This escrow canister will be open sourced and hold the funds under consideration by the vote. The architecture of this canister is discussed in more detail in Section F of this report. 
+
+### Step 5: Outcome of the Vote
+If the vote is against investment, the process concludes for that liquidity provision. Liquidity funds held by the escrow canister are automatically returned to ICVC DAO .
+If the vote favours investment, funds required for development are disbursed to the Engineer and the funds required for the liquidity provision are continue to be held in the escrow canister as trading processes are developed. 
+
+### Step 6: Finalising the Liquidity Provision
+The Engineer develops the trading bots, payment channels and DEX connections required to implement the liquidity provision passed by vote. Once completed, the trading bot or investment channel is able to pull funds from the escrow canister to engage in liquidity provisioning and deploy it’s trading strategy, subject to the limits imposed by the escrow canister and voted by ICVC DAO as detailed in Section F
+
+## Exits
+
+Exits are considered at the end of the year for the purposes of dividend payouts to ICVC investors or at the outset of a vote proposed by ICVC DAO for the full closing of a liquidity provision.
+
+In all exit scenarios, funds will be returned to the ICVC DAO by the escrow canister automatically after a successful vote. There will be a set delay between the vote and the return of the funds to ensure that the trading bot has sufficient time to exit its positions at fair market prices and to ensure minimal disruption to trading markets and exchanges. 
+
+## Technical Architecture
+
+The technical architecture for Fund 2 is designed to give the liquidity provision both the operational independence to ensure optimal and non-disrupted trading activity whilst ensuring the security of funds allocated by ICVC DAO.
+
+All funds allocated to trading bots and payments channels will be held by an escrow canister under the control of ICVC DAO. This escrow canister will be open sourced and will only have three designated accounts to which it may transfer funds:
+
+1- ICVC DAO: The escrow canister may receive and send funds back to the ICVC DAO following the outcome of votes relating to the approval of a liquidity provision or an exit. 
+
+2- Trading bot: The escrow canister may transfer and receive funds from the trading bot following the approval of ICVC DAO and the sign-off of independent auditors on the security of the trading bot itself. This ensures the trading bot or payment channel can draw source of liquidity from the escrow canister to trade on selected DEX’s. The trading bot will have a capped amount of liquidity it may pull from the escrow canister in a given period to avoid any transfers that do not align with the trading plan approved by ICVC DAO.
+
+3- A third party exchange: In order to provide liquidity or rebalance the liquidity of Chain-Key tokens held, Fund 2 must be able to buy an initial amount of tokens. As such, the escrow canister will be able to interact with CEX’s to buy an initial amount or rebalance amount of cryptocurrencies, such as BTC or ETH to mint ckBTC and ckETH, needed to provide liquidity. 
+
+The trading bots developed by the Market Making Engineer will be hosted on smart contracts under the control of ICVC DAO, however this portion of the code base will not be open sourced in order to avoid any market manipulation or intellectual property loss that may ensue and ultimately harm the ability of Fund 2 to operate effectively and secure fair returns for investors. ICVC DAO will have the authority to decide and approve the Expert Market Making Engineer and overall strategy used by the trading bot prior to the final vote on liquidity provisioning to ensure proper oversight and security is maintained. 
+
 
 <TagList>
-  <TagListItem>Frontend (Next.js)</TagListItem>
-  <TagListItem>Custom CMS</TagListItem>
-  <TagListItem>SEO</TagListItem>
-  <TagListItem>Infrastructure</TagListItem>
+  <TagListItem>Author - Isaac Dugdale</TagListItem>
+  <TagListItem>Last updated: 20th January 2024</TagListItem>
 </TagList>
-
-<Blockquote
-  author={{ name: 'Debra Fiscal', role: 'CEO of FamilyFund' }}
-  image={{ src: imageDebraFiscal }}
->
-  Working with Studio, we felt more like a partner than a customer. They really
-  resonated with our mission to change the way people convince their parents to
-  cash out their pensions.
-</Blockquote>
-
-<StatList>
-  <StatListItem value="25%" label="Less traffic" />
-  <StatListItem value="10x" label="Page load times" />
-  <StatListItem value="15%" label="Higher infra costs" />
-  <StatListItem value="$1.2M" label="Legal fees" />
-</StatList>
